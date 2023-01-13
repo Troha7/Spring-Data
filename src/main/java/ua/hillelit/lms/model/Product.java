@@ -18,11 +18,9 @@ import lombok.ToString;
 @ToString
 @Entity
 @Table(schema = "my_store")
-@NamedQueries(@NamedQuery(name = "Product.getByCost", query = "from Product u where u.cost = ?1"))
 public class Product {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column
